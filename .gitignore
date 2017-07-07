@@ -1,0 +1,12 @@
+# IDE-related folders and files
+.idea
+.vs
+.vscode
+*.csproj.user
+
+# Build folders
+bin
+obj
+
+# Configurations
+appsettings.Development.json
