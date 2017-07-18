@@ -10,9 +10,13 @@ namespace EventsApp.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
+
         public string RecipientId { get; set; }
+
         public string DoctorId { get; set; }
+
         public DateTime StartingDate { get; set; }
+
         public IList<Prescription> Prescriptions { get; set; }
 
         public Plan()

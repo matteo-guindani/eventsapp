@@ -5,7 +5,9 @@ namespace EventsApp.Models
     public class ProductStatistics : IComparable<ProductStatistics>
     {
         public string Id { get; set; }
+
         public int Count { get; set; }
+
         public double Quantity { get; set; }
 
         public ProductStatistics(string id)
