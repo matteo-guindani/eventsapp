@@ -22,7 +22,6 @@ namespace EventsApp.Database
             }
         }
 
-        public IMongoCollection<Event> Events => _database.GetCollection<Event>("events");
         public IMongoCollection<Plan> Plans => _database.GetCollection<Plan>("plans");
 
         private MongoClientSettings GetSettings(IOptions<DatabaseConfiguration> config)

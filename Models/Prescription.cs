@@ -8,10 +8,15 @@ namespace EventsApp.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
+
         public string Product { get; set; }
+
         public double Quantity { get; set; }
+
         public int Frequency { get; set; }
+
         public int Duration { get; set; }
+
         public double TotalQuantity => Quantity * Frequency * Duration;
 
         public Prescription()

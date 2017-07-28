@@ -1,5 +1,6 @@
 ﻿using EventsApp.Database;
 using EventsApp.Repositories;
+using EventsApp.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -36,9 +37,10 @@ namespace EventsApp
                 options.DatabaseName = configurationSection.GetValue<string>("DatabaseName");
             });
 
+            services.AddTransient<Randomizer>();
             services.AddSingleton<IDatabaseContext, DatabaseContext>();
-            services.AddSingleton<EventRepository>();
             services.AddSingleton<PlanRepository>();
+            services.AddSingleton<PlanService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
